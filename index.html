@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing DATUSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* El diseñador solo define el tamaño del área 3D */
+        .contenedor-3d {
+            width: 100%;
+            height: 400px;
+            background: #0f172a; /* Color de fondo del sitio 2D */
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+    <div class="max-w-4xl mx-auto py-20 px-6">
+        <h1 class="text-5xl font-bold mb-4">DATUSA <span class="text-cyan-400">Intelligence</span></h1>
+        <p class="text-gray-400 mb-10 text-xl">Incrustando escenas Three.js de forma profesional.</p>
+
+        <!-- AQUÍ VA TU ESCENA -->
+        <div id="mi-cubo-datusa" class="contenedor-3d shadow-2xl border border-cyan-500/20"></div>
+
+        <p class="mt-10 text-gray-500 text-center text-sm italic">
+            Este cubo es una escena de Three.js cargada desde un CDN externo.
+        </p>
+    </div>
+
+    <!-- 1. Cargamos tu script (CDN) -->
+    <script src="https://tu-proyecto.pages.dev/datusa-cubo.umd.js"></script>
+
+    <!-- 2. Lo activamos en el DIV que queramos -->
+    <script>
+        Datusa3D.crearCuboDatusa('mi-cubo-datusa', {
+            color: 0x22d3ee // Podemos pasarle parámetros
+        });
+    </script>
+
+</body>
+</html>
